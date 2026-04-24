@@ -14,12 +14,13 @@ import projectImage4 from "../assets/project4.jpeg";
 import projectImage5 from "../assets/project5.jpeg";
 import projectImage6 from "../assets/project6.jpeg";
 
-import { RiReactjsLine } from "react-icons/ri";
+import { RiReactjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiMongodb } from "react-icons/si";
-import { DiRedis } from "react-icons/di";
-import { FaNodeJs, FaYoutube } from "react-icons/fa";
+import { DiDjango, DiRedis } from "react-icons/di";
+import { FaNodeJs, FaPython, FaYoutube } from "react-icons/fa";
 import {
+  BiLogoDjango,
   BiLogoFigma,
   BiLogoPostgresql,
   BiLogoTypescript,
@@ -101,44 +102,50 @@ export const PROJECTS = [
 
 export const SKILLS = [
   {
-    icon: <RiReactjsLine className="text-4xl text-cyan-400 lg:text-5xl" />,
-    name: "React",
-    experience: "2+ years",
-  },
-  {
     icon: <TbBrandNextjs className="text-4xl text-white lg:text-5xl" />,
     name: "Next.js",
-    experience: "1+ years",
+    experience: "+2 years",
   },
   {
     icon: <BiLogoTypescript className="text-4xl text-sky-700 lg:text-5xl" />,
     name: "Typescript",
-    experience: "1+ years",
+    experience: "+6 Months",
+  },
+  {
+    icon: <RiReactjsLine className="text-4xl text-cyan-400 lg:text-5xl" /> ,
+    name: "React",
+    experience: "+3 years",
+  },
+    {
+    icon: <RiTailwindCssFill className="text-4xl text-sky-700 lg:text-5xl" />,
+    name: "Tailwind CSS",
+    experience: "+1 years",
   },
   {
     icon: <BiLogoFigma className="text-4xl text-sky-700 lg:text-5xl" />,
     name: "Figma",
-    experience: "1+ years",
+    experience: "+6 Months",
+  },
+    {
+    icon: <FaPython className="text-4xl text-yellow-500 lg:text-5xl" />,
+    name: "Python",
+    experience: "+6 Months",
   },
   {
     icon: <SiMongodb className="text-4xl text-green-600 lg:text-5xl" />,
     name: "MongoDB",
-    experience: "1+ years",
+    experience: "+6 Months",
   },
   {
-    icon: <DiRedis className="text-4xl text-red-600 lg:text-5xl" />,
-    name: "Redis",
-    experience: "1+ years",
+    icon: <BiLogoDjango className="text-4xl text-green-600 lg:text-5xl" />,
+    name: "Django",
+    experience: "+6 Months",
   },
-  {
-    icon: <FaNodeJs className="text-4xl text-green-600 lg:text-5xl" />,
-    name: "Node.js",
-    experience: "1+ years",
-  },
+
   {
     icon: <BiLogoPostgresql className="text-4xl text-sky-700 lg:text-5xl" />,
     name: "PostgreSQL",
-    experience: "1+ years",
+    experience: "+6 Months",
   },
 ];
 
@@ -162,35 +169,46 @@ export const EXPERIENCES = [
 export const EDUCATION = [
   {
     degree: "Bachelor of Computer Software Engineering",
-    institution: "Montazeri Technical College of Mashhad",
+    institution: "Technical College",
     duration: "September 2021 - June 2025",
     description:
-      "Focused on web development, programming languages, and database management. Actively involved in coding clubs and hackathons, where I developed several web applications using HTML, CSS, JavaScript, and PHP. Completed a senior project on developing an e-commerce platform. Graduated with a high GPA.",
+      "Focused on web development, programming languages, and database management. Actively involved in coding clubs and hackathons, where I developed several web applications using HTML, CSS, JavaScript, Python. Completed a senior project on developing an e-commerce platform. Graduated with a high GPA.",
   },
 ];
 
 export const SOCIAL_MEDIA_LINKS = [
   {
+    id:1,
     href: "https://x.com/",
     icon: <FaFacebook fontSize={25} className="hover:opacity-80" />,
   },
   {
+    id:2,
+
     href: "https://www.youtube.com/@ProgrammingWithARSO",
     icon: <FaYoutube fontSize={25} className="hover:opacity-80" />,
   },
   {
+    id:3,
+
     href: "https://www.instagram.com/programming_with_arso",
     icon: <FaInstagram fontSize={25} className="hover:opacity-80" />,
   },
   {
+    id:4,
+
     href: "https://x.com/",
     icon: <FaXTwitter fontSize={25} className="hover:opacity-80" />,
   },
   {
+    id:5,
+
     href: "https://github.com/Amirshoeibiomrani",
     icon: <FaGithub fontSize={25} className="hover:opacity-80" />,
   },
   {
+    id:6,
+
     href: "https://www.linkedin.com/in/amirshoeibiomrani-arso/",
     icon: <FaLinkedin fontSize={25} className="hover:opacity-80" />,
   },
