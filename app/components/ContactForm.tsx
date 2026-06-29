@@ -1,9 +1,9 @@
 "use client"
+
 import { motion } from 'framer-motion'
 import React, { useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast'
 import { FiSend } from 'react-icons/fi'
-// ✅ ۱. ایمپورت کردن کتابخانه emailjs
 import emailjs from '@emailjs/browser'
 
 const ContactForm = () => {
@@ -27,18 +27,17 @@ const ContactForm = () => {
         let errors: { [key: string]: string } = {}
         
         if (!formData.name.trim()) {
-            errors.name = "Name is required !"
+            errors.name = "Name is required!"
         }
         
         if (!formData.email.trim()) {
-            errors.email = "Email is required !"
+            errors.email = "Email is required!"
         } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-            // ✅ اصلاح پیام خطا برای فرمت نادرست ایمیل
-            errors.email = "Invalid email format !"
+            errors.email = "Invalid email format!"
         }
         
         if (!formData.message.trim()) {
-            errors.message = "Message is required !"
+            errors.message = "Message is required!"
         }
         
         return errors
@@ -53,20 +52,17 @@ const ContactForm = () => {
         } else {
             setErrors({})
             setIsSending(true)
-            
-            console.log("Sending data:", formData) // دیباگ: بررسی داده‌های ارسالی
 
-            // ✅ ۲. استفاده از ایمپورت شده
             emailjs
                 .send(
-                    "service_rp4oc2a", // Service ID
-                    "template_dekca3s", // Template ID
+                    "service_rp4oc2a", // Service ID شما
+                    "template_dekca3s", // Template ID شما
                     formData,
-                    "KX0eRi5SQDjiSxWlZ" // Public Key
+                    "KX0eRi5SQDjiSxWlZ" // Public Key شما
                 )
                 .then((response) => {
                     console.log("SUCCESS!", response.status, response.text)
-                    toast.success("Message sent successfully")
+                    toast.success("Message sent successfully!")
                     setFormData({ name: "", email: "", message: "" })
                 })
                 .catch((error) => {
@@ -145,8 +141,9 @@ const ContactForm = () => {
                 </div>
                 <button
                     type='submit'
-                    className={`mb-8 w-full rounded border border-stone-50/30 bg-stone-200 px-4 py-2 text-sm font-semibold text-stone-900 hover:bg-stone-300 ${isSending ? "cursor-not-allowed opacity-50" : ""
-                        } `}
+                    className={`mb-8 w-full rounded border border-stone-50/30 bg-stone-200 px-4 py-2 text-sm font-semibold text-stone-900 hover:bg-stone-300 ${
+                        isSending ? "cursor-not-allowed opacity-50" : ""
+                    } `}
                     disabled={isSending}
                 >
                     <div className="flex items-center justify-center gap-2">

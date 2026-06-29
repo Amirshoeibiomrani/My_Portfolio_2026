@@ -16,15 +16,19 @@ import projectImage6 from "../assets/project6.jpeg";
 
 import { RiReactjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { TbBrandNextjs } from "react-icons/tb";
-import { SiMongodb } from "react-icons/si";
-import { DiDjango, DiRedis } from "react-icons/di";
+import { SiMongodb, SiPostgresql } from "react-icons/si";
+import { DiDjango, DiGithub, DiJavascript, DiPostgresql, DiRedis } from "react-icons/di";
 import { FaNodeJs, FaPython, FaYoutube } from "react-icons/fa";
 import {
   BiLogoDjango,
   BiLogoFigma,
+  BiLogoJavascript,
   BiLogoPostgresql,
   BiLogoTypescript,
+  BiSolidFirstAid,
 } from "react-icons/bi";
+import { BsJavascript } from "react-icons/bs";
+import { GrGraphQl } from "react-icons/gr";
 
 export const NAVIGATION_LINKS = [
   { label: "Projects", href: "#projects" },
@@ -113,7 +117,12 @@ export const SKILLS = [
   },
   {
     icon: <RiReactjsLine className="text-4xl text-cyan-400 lg:text-5xl" /> ,
-    name: "React",
+    name: "React.js",
+    experience: "+3 years",
+  },
+    {
+    icon: <BiLogoJavascript className="text-4xl text-yellow-300 lg:text-5xl" /> ,
+    name: "Javascript",
     experience: "+3 years",
   },
     {
@@ -121,21 +130,22 @@ export const SKILLS = [
     name: "Tailwind CSS",
     experience: "+1 years",
   },
+    {
+    icon: <GrGraphQl className="text-4xl text-pink-700 lg:text-5xl" />,
+    name: "GraphQL",
+    experience: "+6 Months",
+  },
   {
-    icon: <BiLogoFigma className="text-4xl text-sky-700 lg:text-5xl" />,
+    icon: <BiLogoFigma className="text-4xl  lg:text-5xl" />,
     name: "Figma",
     experience: "+6 Months",
   },
     {
-    icon: <FaPython className="text-4xl text-yellow-500 lg:text-5xl" />,
+    icon: <FaPython className="text-4xl text-yellow-300 lg:text-5xl" />,
     name: "Python",
     experience: "+6 Months",
   },
-  {
-    icon: <SiMongodb className="text-4xl text-green-600 lg:text-5xl" />,
-    name: "MongoDB",
-    experience: "+6 Months",
-  },
+
   {
     icon: <BiLogoDjango className="text-4xl text-green-600 lg:text-5xl" />,
     name: "Django",
@@ -143,10 +153,16 @@ export const SKILLS = [
   },
 
   {
-    icon: <BiLogoPostgresql className="text-4xl text-sky-700 lg:text-5xl" />,
+    icon: <BiLogoPostgresql className="text-4xl text-sky-800 lg:text-5xl" />,
     name: "PostgreSQL",
     experience: "+6 Months",
   },
+    {
+    icon: <FaGithub className="text-4xl text-white lg:text-5xl" />,
+    name: "GIT",
+    experience: "+2 years",
+  },
+  
 ];
 
 export const EXPERIENCES = [
